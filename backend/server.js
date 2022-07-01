@@ -1,11 +1,14 @@
 //Définition des modules
 const express = require("express");
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const bodyParser = require("body-parser");
 
 //Connexion à la base de donnée
-mongoose
-  .connect("mongodb://localhost:27017/myapp")
+
+mongoose.connect('mongodb+srv://regis94:A@zerty678@atypikhouse.sbxv1hu.mongodb.net/?retryWrites=true&w=majority', 
+{
+  useNewUrlParser: true, useUnifiedTopology: true
+})
   .then(() => {
     console.log("Connected to mongoDB");
   })
