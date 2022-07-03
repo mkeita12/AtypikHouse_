@@ -1,3 +1,3 @@
-module.exports = {
-    "secret" : "mediumMernAppCreation"
-}
+// module.exports = {
+//     "secret" : "mediumMernAppCreation"
+// }
