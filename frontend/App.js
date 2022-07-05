@@ -1,10 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import NavBar from './components/NavBar';
+const express = require ('express');
+const app = express();
+const mongoose = require('mongoose');
 
-export default function App() {
-  return (
-    <NavBar/>
-  );
-};
+mongoose.connect('mongodb+srv://regis94:A@zerty678@atypikhouse.sbxv1hu.mongodb.net/?retryWrites=true&w=majority', 
+{
+  useNewUrlParser: true, useUnifiedTopology: true
+})
+  .then(() => {
+    console.log("Connected to mongoDB");
+  })
+  .catch((e) => {
+    console.log("Error while DB connecting");
+    console.log(e);
+  });
+
+  module.exports = app;
 

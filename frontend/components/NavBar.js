@@ -7,11 +7,13 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import HomeScreen from './screens/HomeScreen';
 import DetailsScreen from './screens/DetailsScreen';
 import SettingsScreen from './screens/SettingsScreen';
+import ProfileItem from './profiles/ProfileItem';
 
 //Screen names
 const homeName = "Home";
 const detailsName = "Details";
 const settingsName = "Settings";
+const profilName = "Profile"
 
 const Tab = createBottomTabNavigator();
 
@@ -47,11 +49,12 @@ function NavBar() {
         }}>
 
         <Tab.Screen name={homeName} component={HomeScreen} />
+        <Tab.Screen name={ProfileItem} component={HomeScreen} />
         <Tab.Screen name={detailsName} component={DetailsScreen} />
         <Tab.Screen name={settingsName} component={SettingsScreen} />
 
       </Tab.Navigator>
-    </NavigationContainer>
+    </NavigationContainer> 
   );
 }
 
